@@ -24,7 +24,7 @@ class Solution {
             }
 
             // 현재 우선순위 큐에서 가장 작은 값(최하 점수)을 결과 배열에 저장
-            answer[i] = priorityQueue.peek();
+            answer[i] = priorityQueue.peek();    // peak()은 반환하되 제거는 안함
         }
 
         // 결과 배열 반환
