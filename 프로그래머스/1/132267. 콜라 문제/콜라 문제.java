@@ -4,7 +4,7 @@ class Solution {
         
         int x = 10000000;
         
-        while(n / a > 0) {
+        while(n >= a) {
             x = (n / a) * b;
             int y = n % a;
 
