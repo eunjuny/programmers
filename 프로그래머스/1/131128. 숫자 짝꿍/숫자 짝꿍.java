@@ -33,6 +33,7 @@ class Solution {
             return "-1";
         } 
         // 결과가 0으로만 이루어져 있으면 0 하나만 반환
+            // 가장 큰 정수를 만들었기 때문에 첫번째 문자가 '0'으로 시작하면 '0' 하나만 출력
         else if (answer.charAt(0) == '0') {
             return "0";
         } 
