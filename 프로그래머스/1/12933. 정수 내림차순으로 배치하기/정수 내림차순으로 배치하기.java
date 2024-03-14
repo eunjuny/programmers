@@ -10,16 +10,13 @@ class Solution {
             pq.offer(Integer.parseInt(s.split("")[i]));
         }
         
-        int idx = 0;
-        // StringBuilder sb = new StringBuilder();
-        String st = "";
+        StringBuilder sb = new StringBuilder();
         
         while (!pq.isEmpty()) {
-            // sb.append(pq.poll());    
-            st = pq.poll() + st;
+            sb.append(pq.poll());    
         }
         
-        long answer = Long.parseLong(st); 
+        long answer = Long.parseLong(sb.reverse().toString()); 
         return answer;
     }
 }
