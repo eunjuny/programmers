@@ -3,24 +3,11 @@ import java.util.Arrays;
 
 class Solution {
     public int[] solution(int[] arr, int divisor) {
-        ArrayList<Integer> answer = new ArrayList<>(); 
+        int[] answer = Arrays.stream(arr).filter(f -> {
+                                return f % divisor == 0;
+                            }).sorted().toArray();
         
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % divisor == 0) {
-                answer.add(arr[i]);
-            }
-        }
+        return answer.length > 0 ? answer : new int[]{-1};
         
-        if (answer.isEmpty()) {
-            return new int[]{-1};
-        }
-        
-        int[] as = new int[answer.size()];
-        for (int j = 0; j < answer.size(); j++) {
-            as[j] = answer.get(j);
-        }
-        
-        Arrays.sort(as);
-        return as;
     }
 }
