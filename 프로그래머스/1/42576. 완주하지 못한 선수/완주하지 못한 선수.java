@@ -7,6 +7,7 @@ class Solution {
      
         // 참가자 목록을 해시맵에 추가하고, 이름이 같은 경우 카운트를 증가시킴
         for (String name : participant) {
+            // getOrDefault(name, 0) + 1 는 key가 name인 값이 있으면 해당 값을 출력하고 없으면 0을 출력한 후 1을 더함 
             map.put(name, map.getOrDefault(name, 0) + 1);
         }
         
