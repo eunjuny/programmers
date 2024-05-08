@@ -63,7 +63,6 @@ class Solution {
                 answer += 5;
             }
         }
-        
         return answer;
     }
 }
