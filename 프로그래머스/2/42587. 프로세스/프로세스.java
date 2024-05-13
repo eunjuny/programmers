@@ -11,7 +11,7 @@ class Solution {
         }
         
         while (!pq.isEmpty()) {
-            for (int i = 0; i < priorities.length; i++) {
+            for (int i = 0; i < priorities.length; i++) {   // 이중 반복문으로 location의 순서를 계산
                 System.out.println(pq);
                 if (pq.peek() == priorities[i]) {
                     pq.poll();
