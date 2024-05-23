@@ -24,10 +24,13 @@ class Solution {
             answer = -1;
         }
 
-        return answer;
+        return answer;                
     }
     
     public void bfs(int[][] maps, int[][] visited) {
+        // 넓이 우선 탐색은 n번의 경우의 수로 갈 수 있는 경로를 모두 체크 한다.
+        // 예를들어, 최단거리가 10일 경우, 종점에 대하여 10의 값이 입력되고, 방문을 했다는 체크가 되기 때문에 10보다 긴 경로로의 방문은 제외 된다.
+        
 
         // BFS를 위한 큐를 초기화하고 시작 위치를 추가
         Queue<int[]> q = new LinkedList<>();
