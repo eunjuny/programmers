@@ -1,7 +1,10 @@
 class Solution {
     
     // 누적합을 이용한 계산
-        
+    // 전체 시간 배열을 생성한 후 각 예약의 입실 시간부터 퇴실 시간까지 배열의 값을 1씩 증가시킨다.
+    // 모든 예약의 값을 배열에 입력했을 때, 전체 시간 배열 중에서 가장 큰 값이 최소로 필요한 방의 값이다.
+    // ex) [0, 0, 1, 2, 2, 3, 2, 2, 1, 0, 0] 과 같을 경우, 최소로 필요한 방의 개수는 3개
+    
     private static final int MAX_TIME = 1_450;  // 24*60 + 10;
     private static final int HOUR = 60;
     private static final int CLEAN_TIME = 10;
