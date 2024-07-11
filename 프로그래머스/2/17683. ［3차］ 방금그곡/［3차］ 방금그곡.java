@@ -40,11 +40,11 @@ class Solution {
         return eTime - sTime;
     }
 
-    private static String repeatString(String str, int len) {
+    private static String repeatString(String str, int playTime) {
         StringBuilder sb = new StringBuilder();
-        while (sb.length() < len) {
+        while (sb.length() < playTime) {
             sb.append(str);
         }
-        return sb.substring(0, len);
+        return sb.substring(0, playTime);
     }
 }
