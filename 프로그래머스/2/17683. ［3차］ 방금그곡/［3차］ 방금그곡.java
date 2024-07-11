@@ -48,4 +48,3 @@ class Solution {
         return sb.substring(0, len);
     }
 }
-
