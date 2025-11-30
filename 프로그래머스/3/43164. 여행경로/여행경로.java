@@ -2,7 +2,15 @@ import java.util.*;
 
 class Solution {
     Map<String, PriorityQueue<String>> graph = new HashMap<>();
+    /*
+    PriorityQueue는 문자열도 비교를 한다.
+        첫 번째 문자 비교
+        같으면 두 번째 문자 비교
+        계속 같으면 세 번째 문자 비교
+        길이가 짧으면 더 앞선 것으로 판단
+    */
     List<String> route = new LinkedList<>();
+    // 대부분의 Hierholzer 구현에서는 경로를 “뒤에서부터” 쌓고 최종적으로 reverse 하는데, 이때 LinkedList 활용이 자연스러움.
     
     public String[] solution(String[][] tickets) {
         
