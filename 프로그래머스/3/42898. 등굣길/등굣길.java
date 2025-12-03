@@ -1,29 +1,27 @@
+import java.util.*;
+
 class Solution {
     public int solution(int m, int n, int[][] puddles) {
+        boolean[][] block = new boolean[n+1][m+1]; 
+        for(int[] puddle : puddles) {
+            int x = puddle[0];
+            int y = puddle[1];
+            block[y][x] = true;
+        } 
+        
         int[][] dp = new int[n+1][m+1];
-        
-        boolean[][] blocked = new boolean[n+1][m+1];
-        
-        for (int[] p : puddles) {
-            int x = p[0];
-            int y = p[1];
-            blocked[y][x] = true;
-        }
-        
         dp[1][1] = 1;
         
-        for (int y = 1; y <= n; y++) {
-            for (int x = 1; x <= m; x++) {
-                if(blocked[y][x] || (x==1 && y==1)) {
-                    continue;
-                }
+        for(int i = 1; i <= m; i++) {
+            for(int j = 1; j <= n; j++) {
+                if(block[j][i] || (i==1 && j==1)) continue;
                 
-                int top = dp[y-1][x];
-                int left = dp[y][x-1];
-                dp[y][x] = (top+left)%1000000007;
+                int top = dp[j-1][i];
+                int left = dp[j][i-1];
+                dp[j][i] = (top+left)%1000000007;
             }
         }
         
         return dp[n][m];
     }
-} 
+}
