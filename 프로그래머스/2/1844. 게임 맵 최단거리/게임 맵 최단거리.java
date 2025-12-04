@@ -7,7 +7,7 @@ class Solution {
     public int solution(int[][] maps) {
         int answer = 0;
         
-        int[][] distance = new int[maps.length][maps[0].length];    // 빈 칸에 0이 자동 초기화됨
+        int[][] distance = new int[maps.length][maps[0].length];    // 빈 칸에 0이 자동 초기화됨(int의 기본값 0)
        
         bfs(maps, distance);
         
